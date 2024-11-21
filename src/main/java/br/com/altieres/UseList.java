@@ -1,6 +1,8 @@
 package br.com.altieres;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 public class UseList {
@@ -28,8 +30,31 @@ public class UseList {
 
         System.out.println("Verifique se a lista possui o objeto 6.1: " + notas.contains(6.1));
 
-
+        System.out.println("Verifique o valo do objeto na posição 5: " + notas.get(5));
         System.out.println(notas);
+
+        System.out.println("Imprima o menor valor da lista do objeto:" + Collections.min(notas));
+
+        System.out.println("Imprima o maior valor da lista do objeto:" + Collections.max(notas));
+
+        System.out.println("Remova o valor da primeira posiçao: ");
+        notas.remove(0);
+
+        System.out.println("Remova o valor da 6.1: ");
+        notas.remove(6.1);
+        System.out.println(notas);
+
+        System.out.println("Verifique se a lista está vaiza: " + notas.isEmpty());
+
+        List<Double> notas2 = new LinkedList<>();
+
+        System.out.println("Crie uma nova lista e insira os valoes da lista antiga nela");
+        notas2.addAll(notas);
+        System.out.println(notas2);
+
+        System.out.println("Imprima o primeiro valor da nova lista: " + notas2.get(0));
+        System.out.println(notas2);
+
     }
 
 }
